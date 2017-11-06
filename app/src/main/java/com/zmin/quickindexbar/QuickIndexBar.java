@@ -104,7 +104,6 @@ public class QuickIndexBar extends View {
         cellWidth = getMeasuredWidth();
         cellHeight = mHeight * 1.0f / LETTERS.length;
         if (!isUp) {
-
             setMeasuredDimension(widthMeasureSpec * 3, heightMeasureSpec);
         } else {
             setMeasuredDimension(widthMeasureSpec, heightMeasureSpec);
@@ -181,8 +180,6 @@ public class QuickIndexBar extends View {
             if (!isUp) { //触摸状态
                 x -= dx;
             } else {  //松手状态
-                //  x = cellWidth * 0.8f - paint.measureText(letter) * 0.5f ;
-                //x =  cellWidth - measureText*1.5f;
                 x -= dx;
                 paint.setColor(getResources().getColor(R.color.text_blue_search));
                 setTextSize(26);
@@ -270,7 +267,6 @@ public class QuickIndexBar extends View {
      */
     private void smaooth() {
         scroller.startScroll(startX, 0, -99, 0, 550);
-        //invalidate();
     }
 
     @Override
